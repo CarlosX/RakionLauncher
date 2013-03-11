@@ -10,7 +10,7 @@ $passx = @anti_injection($_GET['pass']);
 if($userx !="" && $passx !="" && SERVER_ON == true)
 {
 	$string_pass = strtolower(hexToStr($passx));
-    @mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS) or die("[Error]: Auth OFF");
+	@mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS) or die("[Error]: Auth OFF");
 	@mysql_select_db(MYSQL_NAME) or die("[Error]: 3");
 	$result = mysql_query("SELECT * FROM user WHERE id='".$userx."' AND password='".$string_pass."'")or die("[Error]: 2");  
 	$row = mysql_fetch_array( $result ) or die ("[Error]: 5");
