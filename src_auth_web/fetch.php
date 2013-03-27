@@ -1,4 +1,5 @@
-<?
+<?php
+include_once("config.php");
 
 $url = $_SERVER['QUERY_STRING'];
 
@@ -11,15 +12,11 @@ if($app != round($app) || $ver != round($ver)) {
 	echo "Error";
 	exit();
 }
-// DB
-$config['db_host'] = '127.0.0.1';
-$config['db_base'] = 'fetch';
-$config['db_user'] = 'root';
-$config['db_pass'] = '123456';
 
 // mysql
-mysql_connect($config['db_host'], $config['db_user'], $config['db_pass']);
-mysql_select_db($config['db_base']);
+mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS);
+mysql_select_db(MYSQL_NAME);
+
 $dbapp = @mysql_fetch_array(@mysql_query("SELECT * FROM `fetchapp` WHERE AppId = '$app' "));
 
 if ($dbapp != "")
