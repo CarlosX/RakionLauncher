@@ -1,6 +1,5 @@
 <?php
-include_once("config.php");
-
+// impediment url
 $url = $_SERVER['QUERY_STRING'];
 
 list($app, $ver) = explode("&", $url);
@@ -12,11 +11,17 @@ if($app != round($app) || $ver != round($ver)) {
 	echo "Error";
 	exit();
 }
+// DB
+$config['db_host'] = 'SQL HOST';
+$config['db_base'] = 'SQL DB NAME';
+$config['db_user'] = 'SQL USERNAME';
+$config['db_pass'] = 'SQL PASSWORD';
 
 // mysql
-mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS);
-mysql_select_db(MYSQL_NAME);
+mysql_connect($config['db_host'], $config['db_user'], $config['db_pass']);
+mysql_select_db($config['db_base']);
 
+// Fetch
 $dbapp = @mysql_fetch_array(@mysql_query("SELECT * FROM `fetchapp` WHERE AppId = '$app' "));
 
 if ($dbapp != "")
