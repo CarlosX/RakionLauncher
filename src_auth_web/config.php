@@ -11,14 +11,18 @@ define('MYSQL_NAME', "rakion");
 define('CLIENT_AUTH', "freeclient");
 
 #ADD GOLD X DAY
-define('USER_GOLDL', "1000");
-define('USER_GCVAR', false);
+$USER_GOLDL = '25000';
+define('USER_GCVAR', true);
+
+#ADD CASH X DAY
+$USER_CASHL = '25000';
+define('USER_CCVAR', true);
 
 #AUTH DISABLE OR ENABLE
 define('SERVER_ON', true);
 define('SERVER_MSJ_M', "Server Offline");
 
-
-
+@mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS) or die("[Error]: Auth OFF");
+@mysql_select_db(MYSQL_NAME) or die("[Error]: 3");
 
 ?>
