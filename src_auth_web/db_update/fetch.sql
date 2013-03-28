@@ -15,3 +15,15 @@ CREATE TABLE `fetchfile` (
 `FileSize` int(11) NOT NULL default '0',
 PRIMARY KEY (`FileDir`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `logincash` (
+`id`  varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`date`  datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `logingold` (
+`id`  varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' ,
+`date`  datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
