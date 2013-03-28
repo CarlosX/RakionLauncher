@@ -7,7 +7,8 @@ $passx = @anti_injection($_GET['pass']);
 
 if($userx !="" && $passx !="" && SERVER_ON == true)
 {
-	$string_pass = strtolower(hexToStr($passx));
+	$string_h = strtolower(hexToStr($passx));
+	$string_pass = @anti_injection($string_h);
 	$result = mysql_query("SELECT * FROM user WHERE id='".$userx."' AND password='".$string_pass."'")or die("[Error]: 2");  
 	$row = @mysql_fetch_array( $result );
 	

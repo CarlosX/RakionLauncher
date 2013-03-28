@@ -22,7 +22,13 @@ define('USER_CCVAR', true);
 define('SERVER_ON', true);
 define('SERVER_MSJ_M', "Server Offline");
 
-@mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS) or die("[Error]: Auth OFF");
-@mysql_select_db(MYSQL_NAME) or die("[Error]: 3");
-
+if (@mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS))
+{
+	@mysql_select_db(MYSQL_NAME) or die("[Error]: 3");
+}
+else 
+{
+	echo "[Error]: Auth OFF";
+	exit;
+}
 ?>
