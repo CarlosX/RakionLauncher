@@ -5,13 +5,9 @@
 $userx = @anti_injection($_GET['user']);
 $passx = @anti_injection($_GET['pass']);
 
-
-
 if($userx !="" && $passx !="" && SERVER_ON == true)
 {
 	$string_pass = strtolower(hexToStr($passx));
-	@mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASS) or die("[Error]: Auth OFF");
-	@mysql_select_db(MYSQL_NAME) or die("[Error]: 3");
 	$result = mysql_query("SELECT * FROM user WHERE id='".$userx."' AND password='".$string_pass."'")or die("[Error]: 2");  
 	$row = @mysql_fetch_array( $result );
 	
@@ -39,14 +35,33 @@ if($userx !="" && $passx !="" && SERVER_ON == true)
 					if($dat_db <= $dat_ht)
 					{
 						//insertalos db y agregamos oro
-						mysql_query("UPDATE usergameinfo SET gold=gold+".USER_GOLDL." WHERE name = '".$userx."'") or die("");
+						mysql_query("UPDATE usergameinfo SET gold=gold+'".$USER_GOLDL."' WHERE name = '".$userx."'") or die("");
 						mysql_query("REPLACE INTO logingold(id,date) VALUES ('".$userx."','".$expiredate."')") or die("");
 					}
-				}else
+				}
+			}
+
+			if( USER_CCVAR )
+			{
+				$result_q1 = mysql_query("SELECT * FROM logincash WHERE id='".$userx."'") or die("");;
+				$row_q1 = mysql_fetch_array($result_q1);
+			
+				@date_default_timezone_set("Etc/GMT+5");
+				$date_hoy = date('Y-m-d H:i:s');
+				$expiredate = date('Y-m-d H:i:s', time()+3600*24);
+			
+				if($row_q1 != "")
 				{
-					//insertamos db y agregamos oro
-					mysql_query("UPDATE usergameinfo SET gold=gold+".USER_GOLDL." WHERE name = '".$userx."'") or die("");
-					mysql_query("REPLACE INTO logingold(id,date) VALUES ('".$userx."','".$expiredate."')") or die("");
+					$dat_ht = strtotime($date_hoy);
+					$date_db = $row_q1['date'];
+					$dat_db = strtotime($date_db);
+					
+					if($dat_db <= $dat_ht)
+					{
+						//insertalos db y agregamos oro
+						mysql_query("UPDATE cash SET cash=cash+'".$USER_CASHL."' WHERE id = '".$userx."'") or die("");
+						mysql_query("REPLACE INTO logincash(id,date) VALUES ('".$userx."','".$expiredate."')") or die("");
+					}
 				}
 			}
 			
@@ -71,7 +86,9 @@ if($userx !="" && $passx !="" && SERVER_ON == true)
 			echo "Cuenta No Existe!";
 		}
 	}
-}else if(SERVER_ON == false)
+}
+else
+if(SERVER_ON == false)
 {
 	echo SERVER_MSJ_M;
 }
