@@ -1,7 +1,0 @@
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\bin\Release\AutoQuery.exe.config
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\bin\Release\Settings\Settings.ini
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\bin\Release\AutoQuery.exe
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\bin\Release\AutoQuery.pdb
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\bin\Release\MySql.Data.dll
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\obj\Release\AutoQuery.exe
-C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\obj\Release\AutoQuery.pdb
