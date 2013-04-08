@@ -1,0 +1,7 @@
+c:\users\carlosx\documents\visual studio 2012\Projects\AutoQuery\AutoQuery\bin\Debug\AutoQuery.exe.config
+c:\users\carlosx\documents\visual studio 2012\Projects\AutoQuery\AutoQuery\bin\Debug\AutoQuery.exe
+c:\users\carlosx\documents\visual studio 2012\Projects\AutoQuery\AutoQuery\bin\Debug\AutoQuery.pdb
+c:\users\carlosx\documents\visual studio 2012\Projects\AutoQuery\AutoQuery\obj\Debug\AutoQuery.csprojResolveAssemblyReference.cache
+c:\users\carlosx\documents\visual studio 2012\Projects\AutoQuery\AutoQuery\obj\Debug\AutoQuery.exe
+c:\users\carlosx\documents\visual studio 2012\Projects\AutoQuery\AutoQuery\obj\Debug\AutoQuery.pdb
+C:\Users\CarlosX\Documents\Visual Studio 2012\Projects\AutoQuery\AutoQuery\bin\Debug\MySql.Data.dll
