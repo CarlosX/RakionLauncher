@@ -1920,7 +1920,7 @@ CREATE TABLE `usergameinfo` (
   `charname` varchar(30) NOT NULL DEFAULT '',
   `treeuppername` varchar(30) NOT NULL DEFAULT '',
   `treerank` int(11) NOT NULL DEFAULT '0',
-  `bag` tinyint(1) NOT NULL DEFAULT '0',
+  `bag` tinyint(1) NOT NULL DEFAULT '1',
   `rankgrade` smallint(6) NOT NULL DEFAULT '0',
   `country` int(11) NOT NULL DEFAULT '9',
   `lastconnect` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',

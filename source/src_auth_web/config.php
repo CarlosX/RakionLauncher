@@ -12,11 +12,11 @@ define('CLIENT_AUTH', "freeclient");
 
 #ADD GOLD X DAY
 $USER_GOLDL = '25000';
-define('USER_GCVAR', true);
+define('USER_GCVAR', false);
 
 #ADD CASH X DAY
 $USER_CASHL = '25000';
-define('USER_CCVAR', true);
+define('USER_CCVAR', false);
 
 #AUTH DISABLE OR ENABLE
 define('SERVER_ON', true);
