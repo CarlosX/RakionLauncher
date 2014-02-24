@@ -12,10 +12,10 @@ if($app != round($app) || $ver != round($ver)) {
 	exit();
 }
 // DB
-$config['db_host'] = 'SQL HOST';
-$config['db_base'] = 'SQL DB NAME';
-$config['db_user'] = 'SQL USERNAME';
-$config['db_pass'] = 'SQL PASSWORD';
+$config['db_host'] = 'localhost';
+$config['db_base'] = 'rakion';
+$config['db_user'] = 'root';
+$config['db_pass'] = '123456';
 
 // mysql
 if (mysql_connect($config['db_host'], $config['db_user'], $config['db_pass']))

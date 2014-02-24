@@ -2,8 +2,11 @@
 $gf  = @$_GET['f'];
 $md5 = @$_GET['md5'];
 
-
-if( $gf == "rakion.bin")
+if ( $gf == "md5")
+{
+   echo "0";
+}
+else if( $gf == "rakion.bin")
 {
    //rakion.bin   
    echo "00994040083d6620daef2bdbb9bf856c712e02f2";
