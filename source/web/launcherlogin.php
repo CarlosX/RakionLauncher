@@ -17,6 +17,22 @@ if($userx !="" && $passx !="" && SERVER_ON == true)
 		if(strtolower($row['id']) == strtolower($userx) && strtolower($row['password']) == $string_pass)
 		{
 			$get_client = sha1($userx . CLIENT_AUTH . $passx);
+
+
+			if( BAN_SYSTEM == true)
+			{
+		   	    $q = mysql_query("SELECT * FROM `usergameinfo` WHERE name='".$userx."' AND ban='1' LIMIT 1");
+      			    $get = mysql_num_rows($q);
+			    $logindate = date('Y-m-d H:i:s', time()+3600*24);
+
+				if ($get == "1")
+				{
+      				  $r=mysql_fetch_array($q);
+
+					mysql_query("INSERT INTO loginban(name,type,date) VALUES ('".$userx."','forever','".$logindate."')") or die("");
+					die($setting['BAN_ACCOUNT_MSJ']);
+    }
+}
 			
 			if( USER_GCVAR )
 			{
@@ -59,7 +75,7 @@ if($userx !="" && $passx !="" && SERVER_ON == true)
 					
 					if($dat_db <= $dat_ht)
 					{
-						//insertalos db y agregamos oro
+						//insertalos db y agregamos cash
 						mysql_query("UPDATE cash SET cash=cash+'".$USER_CASHL."' WHERE id = '".$userx."'") or die("");
 						mysql_query("REPLACE INTO logincash(id,date) VALUES ('".$userx."','".$expiredate."')") or die("");
 					}
