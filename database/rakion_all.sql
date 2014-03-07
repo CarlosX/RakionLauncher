@@ -2923,7 +2923,7 @@ CREATE TABLE `useriteminfo` (
   `item_sn` int(30) NOT NULL DEFAULT '8000',
   `sn_type` tinyint(2) NOT NULL DEFAULT '3',
   `level` tinyint(3) NOT NULL DEFAULT '1',
-  `limittime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `limittime`  int(11) NOT NULL DEFAULT '0',
   `slot` tinyint(1) NOT NULL DEFAULT '0',
   `exp` bigint(60) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
