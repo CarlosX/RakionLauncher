@@ -3,7 +3,6 @@ Navicat MySQL Data Transfer
 
 Source Server         : local
 Source Server Version : 50534
-Source Host           : localhost:3306
 Source Database       : rakion
 
 Target Server Type    : MYSQL
@@ -157,7 +156,7 @@ CREATE TABLE `characterinfo` (
   `changetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of characterinfo
@@ -177,7 +176,7 @@ CREATE TABLE `claninfo` (
   `createtime` datetime DEFAULT NULL,
   `country` smallint(6) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of claninfo
@@ -219,7 +218,7 @@ CREATE TABLE `clanschedule` (
   `dscore` tinyint(3) DEFAULT NULL,
   `endtime` time DEFAULT '00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of clanschedule
@@ -2645,7 +2644,7 @@ CREATE TABLE `npcinfo` (
   `npc` int(11) NOT NULL DEFAULT '0',
   `level` int(5) DEFAULT '0',
   `exp` int(11) DEFAULT '0',
-  `gold` int(10) DEFAULT '1'
+  `gold` int(10) DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -6262,7 +6261,7 @@ CREATE TABLE `pendingpresents` (
   `user_id` int(11) NOT NULL DEFAULT '0',
   `added_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of pendingpresents
@@ -6469,7 +6468,7 @@ CREATE TABLE `usergameinfo` (
   `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `BanReason` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`,`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of usergameinfo
@@ -6490,7 +6489,7 @@ CREATE TABLE `useriteminfo` (
   `slot` tinyint(1) NOT NULL DEFAULT '1',
   `exp` bigint(60) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of useriteminfo
@@ -6507,7 +6506,7 @@ CREATE TABLE `userstageinfo` (
   `rank` int(11) NOT NULL DEFAULT '0',
   `updatetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of userstageinfo
