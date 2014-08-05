@@ -33,7 +33,7 @@ namespace FixLaunch
                     else
                         _dir2 += dt;
                 }
-                RegistryKey localr = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\\Softnyx\\Rakion");
+                RegistryKey localr = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\\Wow6432Node\\Softnyx\\Rakion");
 
                 if (localr != null)
                 {
