@@ -14,3 +14,8 @@ Thanks
 --------------------------------------------------
 
 - SirMaster
+
+Gracias a todos los que aportaron!
+Thanks to all who contributed!
+
+
