@@ -14,6 +14,14 @@ Date: 2014-03-07 23:13:50
 
 SET FOREIGN_KEY_CHECKS=0;
 
+DROP TABLE IF EXISTS `loginban`;
+CREATE TABLE `loginban` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(11) NOT NULL DEFAULT '',
+  `type` varchar(11) NOT NULL DEFAULT '',
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 -- ----------------------------
 -- Table structure for `admininfo`
 -- ----------------------------
